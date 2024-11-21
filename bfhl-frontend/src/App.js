@@ -31,7 +31,10 @@ const App = () => {
       setError(null);
 
       // Make POST request to the backend
-      const res = await axios.post("http://localhost:8080/bfhl", parsedInput);
+      const res = await axios.post(
+        "https://bfhlback-ftakpzsa0-rjain1002s-projects.vercel.app/",
+        parsedInput
+      );
       setResponse(res.data);
     } catch (err) {
       setError("Failed to fetch response from the backend.");
